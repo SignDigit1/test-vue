@@ -1,19 +1,38 @@
+<!--
+ * @Author: jun.fu
+ * @LastEditors: jun.fu
+ * @Description: file content
+ * @Date: 2020-09-02 11:22:44
+ * @LastEditTime: 2020-09-02 11:40:24
+ * @FilePath: \test-vue\src\App.vue
+-->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <span>{{ count }}</span>
+    <button @click="add">11</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import { mapState } from 'vuex';
+import { mapMutations } from 'vuex';
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  computed: {
+    //
+    count() {
+      return this.$store.state.value.a.count;
+    },
+  },
+  methods: {
+    ...mapMutations({
+      add: 'increment', // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+    }),
+  },
+  watch: {},
+  components: {},
+};
 </script>
 
 <style>
