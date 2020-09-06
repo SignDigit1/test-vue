@@ -3,14 +3,14 @@
  * @LastEditors: jun.fu
  * @Description: file content
  * @Date: 2020-09-02 11:22:44
- * @LastEditTime: 2020-09-02 11:40:24
+ * @LastEditTime: 2020-09-06 15:47:48
  * @FilePath: \test-vue\src\App.vue
 -->
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <span>{{ count }}</span>
-    <button @click="add">11</button>
+    <button @click="add">add</button>
   </div>
 </template>
 
