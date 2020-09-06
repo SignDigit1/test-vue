@@ -3,7 +3,7 @@
  * @LastEditors: jun.fu
  * @Description: file content
  * @Date: 2020-09-02 11:30:24
- * @LastEditTime: 2020-09-02 11:39:22
+ * @LastEditTime: 2020-09-06 15:51:35
  * @FilePath: \test-vue\src\store\index.js
  */
 import Vue from 'vue';
@@ -20,6 +20,9 @@ const store = new Vuex.Store({
   mutations: {
     increment(state) {
       state.value.a.count++;
+    },
+    reducing(state) {
+      state.value.a.count--;
     },
   },
 });

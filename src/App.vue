@@ -3,7 +3,7 @@
  * @LastEditors: jun.fu
  * @Description: file content
  * @Date: 2020-09-02 11:22:44
- * @LastEditTime: 2020-09-06 15:47:48
+ * @LastEditTime: 2020-09-06 15:52:31
  * @FilePath: \test-vue\src\App.vue
 -->
 <template>
@@ -11,6 +11,7 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <span>{{ count }}</span>
     <button @click="add">add</button>
+    <button @click="red">jian</button>
   </div>
 </template>
 
@@ -28,6 +29,7 @@ export default {
   methods: {
     ...mapMutations({
       add: 'increment', // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+      red: 'reducing',
     }),
   },
   watch: {},
