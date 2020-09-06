@@ -3,10 +3,11 @@
  # @LastEditors: jun.fu
  # @Description: docker自动编译部署
  # @Date: 2020-09-06 15:04:14
- # @LastEditTime: 2020-09-06 15:04:45
+ # @LastEditTime: 2020-09-06 15:39:19
  # @FilePath: \test-vue\start.sh
-### 
-git pull
+###
+#!/bin/bash -ilex
+git pull origin master
 
 yarn --registry=https://registry.npm.taobao.org/ && yarn build
 
