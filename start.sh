@@ -5,7 +5,7 @@ git pull origin master
 yarn --registry=https://registry.npm.taobao.org/ && yarn build
 
 #删除容器
-docker rm -f demo1 &> /dev/null
+docker rm -f demo1
 
 docker build -t demo1 --no-cache
 
