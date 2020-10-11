@@ -1,7 +1,7 @@
 # 编译阶段
 FROM node as builder
 
-COPY ./  /test-vue/
+COPY $PWD/  /test-vue/
 
 WORKDIR /test-vue/
 
