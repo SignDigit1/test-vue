@@ -3,7 +3,7 @@
  * @LastEditors: jun.fu
  * @Description: file content
  * @Date: 2020-09-02 11:22:44
- * @LastEditTime: 2020-09-06 15:52:31
+ * @LastEditTime: 2020-10-13 19:32:39
  * @FilePath: \test-vue\src\App.vue
 -->
 <template>
@@ -12,12 +12,14 @@
     <span>{{ count }}</span>
     <button @click="add">add</button>
     <button @click="red">jian</button>
+    <li-touch-test />
   </div>
 </template>
 
 <script>
 // import { mapState } from 'vuex';
 import { mapMutations } from 'vuex';
+import LiTouchTest from './components/LiTouchTest';
 export default {
   name: 'App',
   computed: {
@@ -33,7 +35,9 @@ export default {
     }),
   },
   watch: {},
-  components: {},
+  components: {
+    LiTouchTest,
+  },
 };
 </script>
 
